@@ -42,7 +42,7 @@ def main():
     parser = argparse.ArgumentParser(
         description=
         'It converts url to bitly short link. '
-        'If a short link typed it shows clicks count.'
+        'If a short link typed, it shows clicks count.'
     )
     parser.add_argument('link', help='URL or bitly short link')
     args = parser.parse_args()
