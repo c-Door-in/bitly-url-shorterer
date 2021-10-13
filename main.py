@@ -7,9 +7,6 @@ import requests
 from dotenv import load_dotenv
 
 
-load_dotenv()
-
-
 def shorten_link(url, headers):
     host_url = 'https://api-ssl.bitly.com/v4/bitlinks'
     src_url = {'long_url': url}
@@ -38,6 +35,7 @@ def is_bitlink(url, headers):
 
 
 def main():
+    load_dotenv()
     token = os.environ['BITLY_GENERIC_ACCESS_TOKEN']
     headers = {'Authorization': f'Bearer {token}'}
     parser = argparse.ArgumentParser(
