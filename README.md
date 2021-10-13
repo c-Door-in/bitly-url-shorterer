@@ -1,10 +1,10 @@
-# Bitly url shorterer
+# Bitly URL shortener
 This program convert usual URL to bitly short URL. You can learn more about `bitly` at [bitly.com](https://bitly.com/).
-Also if you already have a short URL from bitlink, you can see how many clicks have done on it.
+Also, if you already have a short URL from bitlink, you can see how many clicks have done on it.
 
 ## How to install
 ### Get your own token
-Before using you should get your own token.
+Before using, you should get your own token.
 - Log in at the [bitly.com](https://bitly.com/a/sign_in).
 - Follow instructions to get a token.
 
@@ -22,11 +22,11 @@ pip install -r requirements.txt
 ```
 
 ## How to start
-Start project by using `python` (or `python3`):
+Start the project by using `python` (or `python3`):
 ```
 python main.py link
 ```
-where *link* is URL you want to convert the short link to or the existing bitlink that you want to see the number of clicks on.
+where *link* is the URL you want to convert the short link to or the existing bitlink that you want to see the number of clicks on.
 
 For help type
 ```
