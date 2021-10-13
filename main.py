@@ -45,7 +45,6 @@ def main():
     )
     parser.add_argument('link', help='URL or bitly short link')
     args = parser.parse_args()
-    # url = input('Input a link: ')
     url = args.link
     if is_bitlink(url, headers):
         try:
