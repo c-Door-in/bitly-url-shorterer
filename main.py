@@ -16,8 +16,9 @@ def shorten_link(url, headers):
 
 
 def count_clicks(link, headers):
-    if urlparse(link).scheme:
-        link = f'{urlparse(link).netloc}{urlparse(link).path}'
+    parsed_link = urlparse(link)
+    if parsed_link.scheme:
+        link = f'{parsed_link.netloc}{parsed_link.path}'
     host_url = f'https://api-ssl.bitly.com/v4/bitlinks/{link}/clicks/summary'
     response = requests.get(host_url, headers=headers)
     response.raise_for_status()
@@ -26,8 +27,9 @@ def count_clicks(link, headers):
 
 
 def is_bitlink(url, headers):
-    if urlparse(url).scheme:
-        url = f'{urlparse(url).netloc}{urlparse(url).path}'
+    parsed_url = urlparse(url)
+    if parsed_url.scheme:
+        url = f'{parsed_url.netloc}{parsed_url.path}'
     host_url = f'https://api-ssl.bitly.com/v4/bitlinks/{url}' 
     response = requests.get(host_url, headers=headers)
     return response.ok
