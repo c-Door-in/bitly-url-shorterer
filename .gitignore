@@ -26,4 +26,5 @@ env/
 # Ignore temp files
 ~**
 
-# Ignore work filesS
+# Ignore work files
+README1.md
