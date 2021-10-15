@@ -30,7 +30,7 @@ def is_bitlink(url, headers):
     parsed_url = urlparse(url)
     if parsed_url.scheme:
         url = f'{parsed_url.netloc}{parsed_url.path}'
-    host_url = f'https://api-ssl.bitly.com/v4/bitlinks/{url}' 
+    host_url = f'https://api-ssl.bitly.com/v4/bitlinks/{url}'
     response = requests.get(host_url, headers=headers)
     return response.ok
 
